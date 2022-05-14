@@ -38,12 +38,8 @@ class Area{
 		Rectangle r=new Rectangle(8,6);
 		Square s=new Square(4);
 		Circle c=new Circle(3);
-		Shape ref;
-		ref=r;
-		r.area(4,5);
-		ref=s;
-		s.area(4);
-		ref=c;
-		c.area(2);
+		r.area(r.x,r.y);
+		s.area(s.x);
+		c.area(c.x);
 	}
 }

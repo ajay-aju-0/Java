@@ -49,11 +49,11 @@ class Rectangle implements Shape {
 
 public class AreaInterface {
     public static void main(String[] args) {
-        int i = 1, op;
+        int op;
         Scanner read = new Scanner(System.in);
         Rectangle r = new Rectangle(read);
         Circle c = new Circle(read);
-        while (i != 0) {
+        do {
             System.out.print("\n_______________OPTIONS_______________\n");
             System.out.println("\n1. Area of the circle\n2. Perimeter of the circle");
             System.out.println("3. Area of the rectangle\n4. Perimeter of the rectangle\n5. Exit");
@@ -74,13 +74,12 @@ public class AreaInterface {
                 r.Perimeter();
                 break;
             case 5:
-                i = 0;
                 System.out.print("\nExiting!!!");
                 break;
             default:
                 System.out.println("\nPlease enter a valid option!!!");
             }
             System.out.print("\n\n_____________________________________\n");
-        }
+        }while (op != 5);
     }
 }
