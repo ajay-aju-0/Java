@@ -2,33 +2,37 @@
 
 import java.util.Scanner;
 
-public class Arraysearch {
+public class ArraySearch {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int i, flag = 0;
+        int i, flag = 0,search;
         System.out.println("Enter the array size:");
         int size = s.nextInt();
-        int[] array = new int[size];
+        int[] arr = new int[size];
+
         System.out.println("Enter the array elements:");
         for (i = 0; i < size; i++) {
-            array[i] = s.nextInt();
+            arr[i] = s.nextInt();
         }
+
         System.out.println("Array is : ");
         for (i = 0; i < size; i++) {
-            System.out.println(array[i]);
+            System.out.println(arr[i]);
         }
-        int search;
+    
         System.out.println("Enter the element to search:");
         search = s.nextInt();
+        
         for (i = 0; i < size; i++) {
-            if (array[i] == search) {
+            if (arr[i] == search) {
                 flag = 1;
                 break;
             }
         }
         if (flag == 1) {
             System.out.println("Element found at position: " + (i + 1));
-        } else {
+        } 
+        else {
             System.out.println("Element not Found");
         }
     }

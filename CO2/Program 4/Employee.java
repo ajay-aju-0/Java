@@ -20,10 +20,12 @@ class Employee{
         eSalary=Integer.parseInt(s.nextLine());
         System.out.println();
     }
+
     void Display()
     {
         System.out.print(eNo+"\t"+eName+" \t "+eSalary+"\n");
     }
+    
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("How many employees you want to store : ");
