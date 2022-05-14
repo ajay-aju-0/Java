@@ -3,6 +3,7 @@
  Create an object of CPU and print information of Processor and RAM.*/
 
 import java.util.Scanner;
+
 class CPU{
     int price;
 
@@ -22,6 +23,7 @@ class CPU{
                     System.out.println("Processor manufacter name:"+manufacter);
                 }
         }
+
     static class RAM{
         int memory;
         String manufacter;
@@ -39,6 +41,7 @@ class CPU{
             System.out.println("RAM manufacter name:"+manufacter);
         }
     }
+
     void showCPU(int price){
     System.out.println("\nCPU price:"+price);
     }

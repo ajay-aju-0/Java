@@ -2,22 +2,22 @@
 
 class ComplexNumber{
     int real;
-    int image;
+    int img;
 
-    void addition(ComplexNumber num1,ComplexNumber num2){
-        System.out.println("Addition of complex number:"+(num1.real+num2.real)+"+"+(num1.image+num2.image)+"i");
+    void addition(ComplexNumber n1,ComplexNumber n2){
+        System.out.println("Sum of complex number:"+(n1.real+n2.real)+"+"+(n1.img+n2.img)+"i");
     }
-    void SetValues(int real,int image){
+    void SetValues(int real,int img){
         this.real=real;
-        this.image=image;
+        this.img=img;
     }
 }
 public class Program3 {
     public static void main(String[] args) {
-        ComplexNumber num1=new ComplexNumber();
-        ComplexNumber num2=new ComplexNumber();
-        num1.SetValues(3,4);
-        num2.SetValues(5,2);
-        num2.addition(num1,num2);  
+        ComplexNumber n1=new ComplexNumber();
+        ComplexNumber n2=new ComplexNumber();
+        n1.SetValues(2,3);
+        n2.SetValues(3,6);
+        n2.addition(n1,n2);  
     }
 }

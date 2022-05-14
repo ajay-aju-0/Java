@@ -1,4 +1,4 @@
-//  Matrix Addition
+//  Read two matrices and perform matrix addition
 
 import java.util.Scanner;
 
@@ -13,10 +13,10 @@ class Matrix {
         matrix = new int[row][col];
     }
 
-    void matrixCreation(Scanner read) {
+    void createMatrix(Scanner s) {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                matrix[i][j] = read.nextInt();
+                matrix[i][j] = s.nextInt();
             }
         }
     }
@@ -32,11 +32,11 @@ public class Program2 {
         }
     }
 
-    public static void displayMatrix(Matrix result) {
-        System.out.println("The metrix after adding given 2 matrices:");
-        for (int i = 0; i < result.row; i++) {
-            for (int j = 0; j < result.col; j++) {
-                System.out.print("\t" + result.matrix[i][j]);
+    public static void displayMatrix(Matrix res) {
+        System.out.println("The matrix after adding given 2 matrices:");
+        for (int i = 0; i < res.row; i++) {
+            for (int j = 0; j < res.col; j++) {
+                System.out.print("\t" + res.matrix[i][j]);
             }
             System.out.print("\n");
         }
@@ -44,19 +44,19 @@ public class Program2 {
 
     public static void main(String[] args) {
         int row, col;
-        Scanner read = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         System.out.print("Enter Number of Rows:");
-        row = read.nextInt();
+        row = s.nextInt();
         System.out.print("Enter Number of columns:");
-        col = read.nextInt();
+        col = s.nextInt();
         Matrix m1 = new Matrix(row, col);
         Matrix m2 = new Matrix(row, col);
-        Matrix result = new Matrix(row, col);
+        Matrix res = new Matrix(row, col);
         System.out.println("Enter the elements of matrix1:");
-        m1.matrixCreation(read);
+        m1.createMatrix(s);
         System.out.println("Enter the elements of matrix2:");
-        m2.matrixCreation(read);
-        addMatrix(m1, m2,result);
-        displayMatrix(result);
+        m2.createMatrix(s);
+        addMatrix(m1, m2,res);
+        displayMatrix(res);
     }
 }
