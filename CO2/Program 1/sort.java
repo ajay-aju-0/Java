@@ -11,7 +11,7 @@ public class sort {
         int n = sc.nextInt();
         String[] str = new String[n];
         Scanner s = new Scanner(System.in);
-        System.out.println("Enetr the Strings:");
+        System.out.println("Enter the Strings:");
         for (i = 0; i < n; i++) {
             str[i] = s.nextLine();
         }
