@@ -13,18 +13,15 @@ class Matrix {
         matrix = new int[row][col];
     }
 
-    void createMatrix(Scanner s) {
+    void readMatrix(Scanner s) {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 matrix[i][j] = s.nextInt();
             }
         }
     }
-}
 
-public class Program2 {
-
-    public static void addMatrix(Matrix m1, Matrix m2, Matrix result) {
+    void addMatrix(Matrix m1, Matrix m2, Matrix result) {
         for (int i = 0; i < m1.row; i++) {
             for (int j = 0; j < m1.col; j++) {
                 result.matrix[i][j] = m1.matrix[i][j] + m2.matrix[i][j];
@@ -32,7 +29,7 @@ public class Program2 {
         }
     }
 
-    public static void displayMatrix(Matrix res) {
+    void displayMatrix(Matrix res) {
         System.out.println("The matrix after adding given 2 matrices:");
         for (int i = 0; i < res.row; i++) {
             for (int j = 0; j < res.col; j++) {
@@ -41,7 +38,9 @@ public class Program2 {
             System.out.print("\n");
         }
     }
+}
 
+public class Addition {
     public static void main(String[] args) {
         int row, col;
         Scanner s = new Scanner(System.in);
@@ -53,10 +52,10 @@ public class Program2 {
         Matrix m2 = new Matrix(row, col);
         Matrix res = new Matrix(row, col);
         System.out.println("Enter the elements of matrix1:");
-        m1.createMatrix(s);
+        m1.readMatrix(s);
         System.out.println("Enter the elements of matrix2:");
-        m2.createMatrix(s);
-        addMatrix(m1, m2,res);
-        displayMatrix(res);
+        m2.readMatrix(s);
+        res.addMatrix(m1, m2,res);
+        res.displayMatrix(res);
     }
 }

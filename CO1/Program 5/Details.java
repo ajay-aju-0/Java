@@ -11,17 +11,16 @@ class CPU{
         int no_of_cores;
         String manufacter;
         void addProcessor(Scanner sc){
-                    System.out.print("Enter no.of cores in processor:");
-                    no_of_cores = sc.nextInt();
-                    sc.nextLine();
-                    System.out.print("Enter the manufacter name:");
-                    manufacter = sc.nextLine();
-                }
-                void display()
-                {
-                    System.out.println("Number of cores in Processor:"+no_of_cores);
-                    System.out.println("Processor manufacter name:"+manufacter);
-                }
+                System.out.print("Enter no.of cores in processor:");
+                no_of_cores = sc.nextInt();
+                sc.nextLine();
+                System.out.print("Enter the manufacter name:");
+                manufacter = sc.nextLine();
+            }
+        void display(){
+                System.out.println("Number of cores in Processor:"+no_of_cores);
+                System.out.println("Processor manufacter name:"+manufacter);
+            }
         }
 
     static class RAM{
@@ -46,7 +45,7 @@ class CPU{
     System.out.println("\nCPU price:"+price);
     }
 }
-public class Program5{
+public class Details{
     public static void main(String a[]){
     Scanner sc=new Scanner(System.in);
     System.out.print("enter the price of cpu:");
