@@ -7,44 +7,51 @@ Department,  Teacherid  and  also  contain  constructors  and  methods  to  disp
 members. Use array of objects to display details of N teachers.*/
 
 import java.util.Scanner;
+
 class Person{
 	String Name;
 	String Gender;
 	String Address;
 	int Age;
+
 	Person(){
 	Scanner sc=new Scanner(System.in);
+    Scanner s=new Scanner(System.in);
 	System.out.println("Enter the Name:");
 	Name=sc.next();
 	System.out.println("Enter the Gender:");
 	Gender=sc.next();
 	System.out.println("Enter the Address:");
-	Address=sc.next();
+	Address=s.nextLine();
 	System.out.println("Enter the Age:");
 	Age=sc.nextInt();
 	}
 }
+
 class Employee extends Person{
 	int EmpId;
-	String College_name;
+	String Company_name;
 	String Qualification;
 	int Salary;
+
 	Employee(){
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the EmpId:");
 		EmpId=sc.nextInt();
-		System.out.println("Enter the College_name:");
-		College_name=sc.next();
+		System.out.println("Enter the Company_name:");
+		Company_name=sc.next();
 		System.out.println("Enter the Qualification:");
 		Qualification=sc.next();
 		System.out.println("Enter the Salary:");
 		Salary=sc.nextInt();
 	}
 }
+
 class Teacher extends Employee{
+	String Teacherid;
 	String Subject;
 	String Department;
-	String Teacherid;
+
 	Teacher(){
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the Subject:");
@@ -62,7 +69,7 @@ class Teacher extends Employee{
 		System.out.println("Address:"+Address);
 		System.out.println("Age:"+Age);
 		System.out.println("EmpId:"+EmpId);
-		System.out.println("Company_name:"+College_name);
+		System.out.println("Company_name:"+Company_name);
 		System.out.println("Qualification:"+Qualification);
 		System.out.println("Salary:"+Salary);
 		System.out.println("Subject:"+Subject);
@@ -71,6 +78,7 @@ class Teacher extends Employee{
 		System.out.println();
 	}
 }
+
 class MultilevelInheritance{
 	public static void main(String ar[]){
 		Scanner sc=new Scanner(System.in);
@@ -78,7 +86,7 @@ class MultilevelInheritance{
 		int n=sc.nextInt();
 		Teacher[] teacher=new Teacher[n];
 		for(int i=0;i<n;i++)
-		teacher[i]=new Teacher();
+		    teacher[i]=new Teacher();
 		for(int i=0;i<n;i++){
 			System.out.println("details of teachers:");
 			teacher[i].display();

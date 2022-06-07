@@ -54,7 +54,7 @@ class Inheritance{
 		int n=sc.nextInt();
 		Teacher[] teacher=new Teacher[n];
 		for(int i=0;i<n;i++)
-		teacher[i]=new Teacher();
+		    teacher[i]=new Teacher();
 		System.out.println("Details of teachers");
 		for(int i=0;i<n;i++){
 			System.out.println();

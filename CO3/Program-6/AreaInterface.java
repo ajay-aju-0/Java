@@ -4,8 +4,6 @@ program to find area and perimeter of objects.*/
 
 import java.util.*;
 
-import org.w3c.dom.css.Rect;
-
 interface Shape {
     public void Area();
     public void Perimeter();
@@ -14,9 +12,9 @@ interface Shape {
 class Circle implements Shape {
     Double radius;
 
-    Circle(Scanner read) {
+    Circle(Scanner sc) {
         System.out.print("\nEnter the Radius:");
-        radius = read.nextDouble();
+        radius = sc.nextDouble();
     }
 
     public void Area() {
@@ -31,11 +29,11 @@ class Circle implements Shape {
 class Rectangle implements Shape {
     Double length, breadth;
 
-    Rectangle(Scanner read){
+    Rectangle(Scanner sc){
         System.out.print("\nEnter the length of Rectangle:");
-        length = read.nextDouble();
+        length = sc.nextDouble();
         System.out.print("\nEnter the breadth of Rectangle:");
-        breadth = read.nextDouble();
+        breadth = sc.nextDouble();
     }
 
     public void Area() {
@@ -49,18 +47,18 @@ class Rectangle implements Shape {
 
 public class AreaInterface {
     public static void main(String[] args) {
-        int op;
-        Scanner read = new Scanner(System.in);
-        Rectangle r = new Rectangle(read);
-        Circle c = new Circle(read);
+        int ch;
+        Scanner sc = new Scanner(System.in);
+        Rectangle r = new Rectangle(sc);
+        Circle c = new Circle(sc);
         do {
-            System.out.print("\n_______________OPTIONS_______________\n");
+            System.out.print("\n_______________MAIN MENU_______________\n");
             System.out.println("\n1. Area of the circle\n2. Perimeter of the circle");
             System.out.println("3. Area of the rectangle\n4. Perimeter of the rectangle\n5. Exit");
             System.out.print("_____________________________________\n");
             System.out.print("\nPlease choose your option: ");
-            op = read.nextInt();
-            switch (op) {
+            ch = sc.nextInt();
+            switch (ch) {
             case 1:
                 c.Area();
                 break;
@@ -80,6 +78,6 @@ public class AreaInterface {
                 System.out.println("\nPlease enter a valid option!!!");
             }
             System.out.print("\n\n_____________________________________\n");
-        }while (op != 5);
+        }while (ch != 5);
     }
 }

@@ -6,6 +6,7 @@ class Shape{
 		x=a;
 	}
 }
+
 class Rectangle extends Shape{
 	double y;
 	Rectangle(double a,double b){
@@ -16,6 +17,7 @@ class Rectangle extends Shape{
 		System.out.println("Area of rectangle:"+(x*y));
 	}
 }
+
 class Square extends Shape{
 	Square(double a){
 		super(a);
@@ -24,6 +26,7 @@ class Square extends Shape{
 		System.out.println("Area of square:"+(x*x));
 	}
 }
+
 class Circle extends Shape{
 	Circle(double a){
 		super(a);
@@ -32,8 +35,9 @@ class Circle extends Shape{
 		System.out.println("Area of circle:"+(3.14*x*x));
 	}
 }
+
 class Area{
-	public static void main(String ar[]){
+	public static void main(String args[]){
 		
 		Rectangle r=new Rectangle(8,6);
 		Square s=new Square(4);
