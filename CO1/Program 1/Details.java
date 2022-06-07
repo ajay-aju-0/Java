@@ -25,8 +25,10 @@ class Product{
             return p3.pname;
         }
     }
+}
 
-    public static void main(String[] args) 
+public class Details{
+     public static void main(String[] args) 
     {
         Product P1=new Product("101", "Mobile", 20000);
         Product P2=new Product("132", "Laptop", 50000);

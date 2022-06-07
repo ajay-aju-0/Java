@@ -2,11 +2,13 @@
 
 import java.util.Scanner;
 
-public class Matrix{
+class Matrix{
     int row;
     int col;
+}
 
-    public static void main(String[] args) {
+public class Addition{
+     public static void main(String[] args) {
         Matrix m = new Matrix();
         Scanner s = new Scanner(System.in);
         int i,j,flag=1;
@@ -54,4 +56,5 @@ public class Matrix{
             System.out.println("Matrix is Not Symmetric");
         }   
     }
+
 }
