@@ -10,7 +10,7 @@ class userNameError extends Exception {
     }
 
     public String userExp() {
-        return "userNameError[" + user + "]";
+        return user;
     }
 }
 
@@ -22,21 +22,11 @@ class PassWordError extends Exception {
     }
 
     public String passExp() {
-        return "PassWordError[" + passwd + "]";
+        return passwd;
     }
 }
 
 public class userAuthentication {
-    static void check(String u, String p) throws userNameError, PassWordError {
-        if (!u.equals("user")) {
-            throw new userNameError(u);
-        } else if (!p.equals("user@123")) {
-            throw new PassWordError(p);
-        } else {
-            System.out.println("Auntentication Success!!!");
-        }
-    }
-
     public static void main(String[] args) {
         try {
             String u, p;
@@ -45,11 +35,19 @@ public class userAuthentication {
             u = sc.nextLine();
             System.out.println("Password : ");
             p = sc.nextLine();
-            check(u, p);
+            if (!u.equals("user")) {
+                throw new userNameError(u);
+            } 
+            else if (!p.equals("user@123")) {
+                throw new PassWordError(p);
+            }
+            else {
+                System.out.println("Auntentication Success!!!");
+            }
         } catch (userNameError e) {
-            System.out.println("Invalid Username!!!");
+            System.out.println(e.userExp()+" is Invalid Username!!!");
         } catch (PassWordError e) {
-            System.out.println("Invalid Password!!!");
+            System.out.println(e.passExp()+" is Invalid Password!!!");
         }
     }
 }
