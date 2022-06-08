@@ -37,6 +37,11 @@ class FibEven{
 			if(i%2==0){
 				count++;
 				System.out.println(i);
+                try{
+				    Thread.sleep(500);
+			    }catch(Exception e){
+					System.out.println(e);
+				}
 			}
 		}
 		

@@ -38,6 +38,11 @@ class Numbers{
          {
             System.out.println(num);
             i++;
+            try{
+				Thread.sleep(500);
+			}catch(Exception e){
+					System.out.println(e);
+				}
          }
          status = 1;
          num++;

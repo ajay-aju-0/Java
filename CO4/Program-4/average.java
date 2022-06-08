@@ -6,9 +6,9 @@ class Neg_input_exception extends Exception{
 	Neg_input_exception(){
 		super();
 	}
-	Neg_input_exception(String s){
-		super(s);
-	}
+	// Neg_input_exception(String s){
+	// 	super(s);
+	// }
 }
 class average{
 	public static void main(String arg[]){
