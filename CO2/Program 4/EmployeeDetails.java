@@ -36,7 +36,6 @@ public class EmployeeDetails{
         int i;
         for(i=0;i<n;i++)
         {
-            // initializing array
             emp[i]=new Employee();
         }
         for(i=0;i<n;i++){
@@ -50,6 +49,9 @@ public class EmployeeDetails{
             if(emp[i].eNo == search){
                 emp[i].Display();
                 break;
+            }
+            else {
+                System.out.println("Employee with entered ID doesn't exist!");
             }
         }
     }
