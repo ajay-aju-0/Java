@@ -13,7 +13,7 @@ interface Sports{
 }
 
 class Result implements Student,Sports{
-    String SName;
+    String Name;
     int RollNo,Max,Mark,Score;
     Result(Scanner read){
         Details(read);
@@ -21,10 +21,10 @@ class Result implements Student,Sports{
         Score(read);
     }
     public void Details(Scanner read){
-        System.out.print("Enter Student Name : ");
-        SName=read.nextLine();
         System.out.print("Roll number of the student : ");
         RollNo= Integer.parseInt(read.nextLine());
+        System.out.print("Enter Student Name : ");
+        Name=read.nextLine();
     }
     public void AcademicScore(Scanner read){
         System.out.print("Enter the Maximum mark : ");
@@ -38,10 +38,10 @@ class Result implements Student,Sports{
     }
     void Display(){
         System.out.println("\n STUDENT INFORMATION");
-        System.out.println("\nName of the Student : "+ SName);
-        System.out.println("Roll number of the Student : "+ RollNo);
-        System.out.println("Mark optained ("+Max+") : "+Mark);
-        System.out.println("Mark optained Sports (100): "+ Score);
+        System.out.println("Roll number: "+ RollNo);
+        System.out.println("Name : "+ Name);
+        System.out.println("Mark obtained ("+Max+") : "+Mark);
+        System.out.println("Mark obtained in Sports (100): "+ Score);
     }
 }
 

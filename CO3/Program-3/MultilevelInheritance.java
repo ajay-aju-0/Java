@@ -72,9 +72,9 @@ class Teacher extends Employee{
 		System.out.println("Company_name:"+Company_name);
 		System.out.println("Qualification:"+Qualification);
 		System.out.println("Salary:"+Salary);
+		System.out.println("Teacherid:"+Teacherid);
 		System.out.println("Subject:"+Subject);
 		System.out.println("Department:"+Department);
-		System.out.println("Teacherid:"+Teacherid);
 		System.out.println();
 	}
 }

@@ -10,6 +10,7 @@ class Publisher{
 		System.out.println("Publisher name:"+pname);
 	}
 }
+
 class Book extends Publisher{
 	String bookname;
 	Book(String p,String b){
@@ -21,6 +22,7 @@ class Book extends Publisher{
 		System.out.println("Book name:"+bookname);
 	}
 }
+
 class Literature extends Book{
 	String litname;
 	Literature(String p,String b,String l){
@@ -32,29 +34,29 @@ class Literature extends Book{
 		System.out.println("Literature name:"+litname);
 	}
 }
+
 class Fiction extends Book{
-	String fname;
+	String ficname;
 	Fiction(String p,String b,String f){
 		super(p,b);
-		fname=f;
+		ficname=f;
 	}
 	void display(){
 		super.display();
-		System.out.println("Fiction name:"+fname);
+		System.out.println("Fiction name:"+ficname);
 	}
-
 }
+
 class BooksInfo{
 	public static void main(String ar[]){
-		Literature obl=new Literature("Prakash Books","The Story of My Experiments with Truth","An autobiography of Mahathma Gandhi");
-		Fiction obf=new Fiction("Random house USA","Anna karenina","Leo Tolstoy");
+		Literature lit=new Literature("Prakash Books","The Story of My Experiments with Truth","An autobiography of Mahathma Gandhi");
+		Fiction fic=new Fiction("Random house USA","Anna karenina","Leo Tolstoy");
 		System.out.println("Literature");
 		System.out.println("---------------------------------------");
-		obl.display();
+		lit.display();
 		System.out.println();
 		System.out.println("Fiction");
 		System.out.println("---------------------------------------");
-		obf.display();
-		
+		fic.display();	
 	}
 }

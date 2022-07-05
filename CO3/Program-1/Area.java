@@ -31,8 +31,8 @@ class Circle extends Shape{
 	Circle(double a){
 		super(a);
 	}
-	void area(double x){
-		System.out.println("Area of circle:"+(3.14*x*x));
+	void area(){
+		System.out.println("Area of circle:"+(3.14*super.x*super.x));
 	}
 }
 
@@ -44,6 +44,6 @@ class Area{
 		Circle c=new Circle(3);
 		r.area(r.x,r.y);
 		s.area(s.x);
-		c.area(c.x);
+		c.area();
 	}
 }
