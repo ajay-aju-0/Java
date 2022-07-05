@@ -3,13 +3,13 @@
 import java.util.Scanner;
 
 class Matrix {
-    int col;
     int row;
+    int col;
     int[][] matrix;
 
     Matrix(int r, int c) {
-        col = c;
         row = r;
+        col = c;
         matrix = new int[row][col];
     }
 
