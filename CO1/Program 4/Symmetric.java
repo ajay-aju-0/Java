@@ -7,7 +7,7 @@ class Matrix{
     int col;
 }
 
-public class Addition{
+public class Symmetric{
      public static void main(String[] args) {
         Matrix m = new Matrix();
         Scanner s = new Scanner(System.in);
@@ -34,15 +34,15 @@ public class Addition{
         } 
 
         System.out.println("Transpose Matrix : ");
-        for(i=0;i<m.row;i++){
-            for(j=0;j<m.col;j++){                     
+        for(i=0;i<m.col;i++){
+            for(j=0;j<m.row;j++){                     
                 System.out.print(matrix[j][i]+ "\t");
             }
          System.out.println();  
         } 
 
-        for(i=0;i<m.row;i++){
-            for(j=0;j<m.col;j++){
+        for(i=0;i<m.col;i++){
+            for(j=0;j<m.row;j++){
                 if(matrix[i][j] != matrix[j][i]){
                   flag=0;
                   break;
